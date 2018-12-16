@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 180px;
+  /* must be same height as the footer */
+}
+
+#footer {
+  position: relative;
+  margin-top: -180px;
+  /* negative value of footer height */
+  height: 180px;
+  clear: both;
+  background-color: rgb(32, 70, 126);
+}
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+  /* CSS for Header */
+
+  .topnav {
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(249, 249, 249, 0.9);
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .topnav a {
+    color: black;
+    padding: 65px 30px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav {
+    text-align: right;
+  }
+
+  .menu a {
+    line-height: 150px;
+    clear: right;
+  }
+
+  .nav img {
+    float: left;
+  }
+
+  .headerlogo {
+    padding-top: 20px;
+    padding-left: 50px;
+  }
+
+  label.hamburger {
+    margin: 0 40px 0 0;
+    font-size: 25px;
+    line-height: 150px;
+    display: none;
+    width: 25px;
+    float: right;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  .topnav a:hover {
+    background-color: rgb(32, 70, 126);
+    color: white;
+    justify-content: center;
+  }
+
+  /* End CSS for Header */
+
+
+/* CSS for Mobile */
+  @media screen and (max-width: 975px) {
+    label.hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    .menu {
+      text-align: center;
+      width: 100%;
+      display: none;
+    }
+
+    .menu a {
+      display: block;
+      background: rgba(249, 249, 249, 0.9);
+      border-bottom: 1px solid rgba(64, 100, 143, 0.8);
+      line-height: 100px;
+    }
+
+    .topnav a {
+      padding: 0;
+    }
+
+    #toggle:checked + .menu {
+      display: block;
+    }
+
+    nav ul {
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
