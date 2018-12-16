@@ -194,4 +194,8 @@ body:before {
       text-align: center;
       margin: 10px 0;
     }
+
+    .navEstimate {
+      display: none;
+    }
   }
